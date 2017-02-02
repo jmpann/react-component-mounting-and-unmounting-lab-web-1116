@@ -1,10 +1,19 @@
 const React = require('react');
 
 class Pancake extends React.Component {
-  
+
   // TODO: create a componentDidMount() which will start the interval to count how long the pancake has been cooking
-  
+
+  componentDidMount(){
+    this.startInterval()
+  }
+
   // TODO: create a componentWillUnmount() which will clear the interval
+
+  componentWillUnmount(){
+    this.cleanUpInterval()
+  }
+  ///When this is not present and you place two pancakes on the cooker, if you flip both panncakes, then press take me off on the first pancake,
 
   updateCounter() {
     this.setState({
